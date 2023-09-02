@@ -20,7 +20,7 @@ function ShowTask({ task, onDelete, onEdit }) {
     const handleSubmit = (id, newAction) => {
         setShowEdit(false);
         onEdit(id, newAction)
-        editStatusx(true)
+        // editStatusx(true)
     };
 
     const handleDeleteClick = () => {
@@ -39,7 +39,8 @@ function ShowTask({ task, onDelete, onEdit }) {
 
     return (
 
-        <div className="task-container">
+        <div className="task-contain-all">
+            <div className="task-container">
             <div className="task-bar">
                 <input type="checkbox" className="task-checkbox" checked={status} onChange={handleStatus} />
                 <p className={`${status ? "task-content task-completed" : "task-content"} `}>{content} </p>
@@ -53,6 +54,7 @@ function ShowTask({ task, onDelete, onEdit }) {
                     </button>
                 </div>
             </div>
+        </div>
         </div>
 
     );
